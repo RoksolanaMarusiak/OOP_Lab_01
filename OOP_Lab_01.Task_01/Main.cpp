@@ -6,23 +6,23 @@ class Stack
 {
 private:
 	int array1[10];
-	int first; //Зберігає індекс першого елемента 
+	int first; 
 public:
-	Stack(); //конструктор 
-	~Stack();  //деструктор 
+	Stack(); 
+	~Stack(); 
 
-	int GetFirst(); //отримати номер першого елемента, селектор first
-	int Add(int d); //добавити елемент d в MyStack
-	void SetFirst(int d); //вказати номер першого елемента, модифікатор first
-	int Take(); //Вилучення першого елемента
-	void Print(); //стан стеку (номер останнього елемента (від 0 до 9), список елементів)
-	int Get(int p);  // вивести на екран p елемент
-	int Amount(); //визначення кількості елементів
+	int GetFirst();
+	int Add(int d);
+	void SetFirst(int d);
+	int Take(); 
+	void Print();
+	int Get(int p);  
+	int Amount(); 
 	int Max();
 	int Min();
 };
 
-Stack::Stack()  //конструктор 
+Stack::Stack() 
 {
 	this->SetFirst(-1);
 }
@@ -31,12 +31,12 @@ Stack::~Stack()
 {
 }
 
-int Stack::GetFirst() //отримати номер першого елемента, селектор first
+int Stack::GetFirst()
 {
 	return this->first;
 }
 
-int Stack::Add(int d) //добавити елемент d в MyStack
+int Stack::Add(int d) 
 {
 	if (this->GetFirst() > 9) return -1;
 	this->SetFirst(this->GetFirst() + 1);
@@ -44,19 +44,19 @@ int Stack::Add(int d) //добавити елемент d в MyStack
 	return 1;
 }
 
-void Stack::SetFirst(int d)  //вказати номер першого елемента, модифікатор first
+void Stack::SetFirst(int d) 
 {
 	this->first = d;
 }
 
-int Stack::Take()  //Вилучення першого елемента
+int Stack::Take() 
 {
 	if (this->GetFirst() == -1) return -1;
 	this->SetFirst(this->GetFirst() - 1);
 	return this->array1[this->GetFirst() + 1];
 }
 
-void Stack::Print()  //стан стеку (номер останнього елемента (від 0 до 9), список елементів)
+void Stack::Print() 
 {
 	cout << "\n---------Print--------\n";
 	cout << "First: " << (this->GetFirst()) << "\n";
@@ -71,7 +71,7 @@ void Stack::Print()  //стан стеку (номер останнього елемента (від 0 до 9), списо
 	cout << "----------------------\n\n";
 }
 
-int Stack::Get(int p)  // вивести на екран p елемент
+int Stack::Get(int p) 
 {
 	if (p > this->GetFirst())
 	{
@@ -81,7 +81,7 @@ int Stack::Get(int p)  // вивести на екран p елемент
 	return this->array1[p];
 }
 
-int Stack::Amount() //визначення кількості елементів
+int Stack::Amount() 
 {
 	int amnt = 0;
 	for (int i = this->GetFirst(); i >= 0; i--)
@@ -106,7 +106,7 @@ int Stack::Max()
 	return max;
 }
 
-int Stack::Min() //визначення мінімума і максимума 
+int Stack::Min()
 {
 	int min = array1[0];
 	for (int i = this->GetFirst(); i >= 0; i--)
