@@ -108,7 +108,7 @@ int main(void)
 	cin >> Y;
 	cout << "z = ";
 	cin >> Z;
-	cout << "Radis:" << endl;
+	cout << "Radius:" << endl;
 	cin >> cradius;
 	one->SetX(X);
 	one->SetY(Y);
