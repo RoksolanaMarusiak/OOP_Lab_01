@@ -114,12 +114,12 @@ int main(void)
 	one->SetY(Y);
 	one->SetZ(Z);
 	one->SetRadius(cradius);
-	cout << endl << "------Print------" << endl;
+	cout << endl << "------Print------" << endl << endl;
 	cout << "Coordinates of the center:" << endl;
-	cout << "O(" << one->GetX() << ";" << one->GetY() << ";" << one->GetZ() << ")" << endl;
-	cout << "Radius:" << endl << one->GetRadius() << endl;
-	cout << "Length" << endl << one->Length() << endl;
-	cout << "Square" << endl << one->Square() << endl;
+	cout << "O(" << one->GetX() << ";" << one->GetY() << ";" << one->GetZ() << ")" << endl << endl;
+	cout << "Radius:" << endl << one->GetRadius() << endl << endl;
+	cout << "Length:" << endl << one->Length() << endl << endl;
+	cout << "Square:" << endl << one->Square() << endl << endl;
 	cout << "------------------" << endl << endl;
 	system("pause");
 	return 0;
