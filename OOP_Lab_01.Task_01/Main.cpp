@@ -123,7 +123,6 @@ int Stack::Min() //визначення мінімума і максимума
 int main(void)
 {
 	Stack* one = new Stack();
-	int array2[10];
 	cout << "Add 9: " << one->Add(9) << endl;
 	cout << "Add 7: " << one->Add(7) << endl;
 	cout << "Add 0: " << one->Add(0) << endl;
