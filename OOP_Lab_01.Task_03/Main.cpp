@@ -1,8 +1,9 @@
 #include<iostream>
-
+#include<clocale>
 using namespace std;
 
-class Time {
+class Time
+{
 private:
 	int hour;
 	int minute;
@@ -20,7 +21,7 @@ public:
 };
 
 Time::Time()
-{ 
+{
 	this->hour = 0;
 	this->minute = 0;
 	this->second = 0;
@@ -30,7 +31,7 @@ Time::~Time()
 {
 }
 
-void Time::SetHour(int hour) 
+void Time::SetHour(int hour)
 {
 	if (hour < 0 || hour > 23)
 	{
@@ -40,7 +41,7 @@ void Time::SetHour(int hour)
 	this->hour = hour;
 }
 
-void Time::SetMinute(int minute) 
+void Time::SetMinute(int minute)
 {
 	if (minute < 0 || minute > 59)
 	{
@@ -50,7 +51,7 @@ void Time::SetMinute(int minute)
 	this->minute = minute;
 }
 
-void Time::SetSecond(int second) 
+void Time::SetSecond(int second)
 {
 	if (second < 0 || second > 59)
 	{
@@ -60,24 +61,24 @@ void Time::SetSecond(int second)
 	this->second = second;
 }
 
-int Time::GetHour() 
-{ 
-	return this->hour; 
+int Time::GetHour()
+{
+	return this->hour;
 }
 
 int Time::GetMinute()
-{ 
-	return this->minute; 
+{
+	return this->minute;
 }
 
-int Time::GetSecond() 
-{ 
-	return this->second; 
+int Time::GetSecond()
+{
+	return this->second;
 }
 
 int main(void)
 {
-	system("chcp 1251");
+	setlocale(LC_ALL, "Ukrainian");
 	Time* one = new Time;
 	int hour = 0, minute = 0, second = 0;
 	cout << "=============" << endl;
