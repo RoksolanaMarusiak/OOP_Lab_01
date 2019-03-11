@@ -44,7 +44,7 @@ void Circle::SetRadius(double cradius)
 {
 	if (cradius <= 0)
 	{
-		throw "Incorrect radius";
+		throw "Некоректне значення радіуса";
 	}
 
 	this->radius = cradius;
@@ -98,28 +98,29 @@ int Circle::GetZ()
 
 int main(void)
 {
+	system("chcp 1251");
 	int X, Y, Z;
 	double cradius;
 	Circle *one = new Circle;
-	cout << "Coordinates of the center:" << endl;
+	cout << "Введiть координати центру кола:" << endl;
 	cout << "x = ";
 	cin >> X;
 	cout << "y = ";
 	cin >> Y;
 	cout << "z = ";
 	cin >> Z;
-	cout << "Radius:" << endl;
+	cout << "Введiть радiус:" << endl;
 	cin >> cradius;
 	one->SetX(X);
 	one->SetY(Y);
 	one->SetZ(Z);
 	one->SetRadius(cradius);
-	cout << endl << "------Print------" << endl << endl;
-	cout << "Coordinates of the center:" << endl;
-	cout << "O(" << one->GetX() << ";" << one->GetY() << ";" << one->GetZ() << ")" << endl << endl;
-	cout << "Radius:" << endl << one->GetRadius() << endl << endl;
-	cout << "Length:" << endl << one->Length() << endl << endl;
-	cout << "Square:" << endl << one->Square() << endl << endl;
+	cout << endl << "------------------" << endl;
+	cout << "Координати центру:" << endl;
+	cout << "O(" << one->GetX() << ";" << one->GetY() << ";" << one->GetZ() << ")" << endl;
+	cout << "Радiус:" << endl << one->GetRadius() << endl;
+	cout << "Довжина кола:" << endl << one->Length() << endl;
+	cout << "Площа кола:" << endl << one->Square() << endl;
 	cout << "------------------" << endl << endl;
 	system("pause");
 	return 0;
